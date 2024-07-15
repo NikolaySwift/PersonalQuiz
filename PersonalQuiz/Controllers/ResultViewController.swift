@@ -36,6 +36,7 @@ final class ResultViewController: UIViewController {
             let answerCount = answersByAnimal[$0.animal, default: 0]
             answersByAnimal[$0.animal] = answerCount + 1
         }
+        
         let answer = answersByAnimal.max(by: { $0.value < $1.value })
         
         return answer?.key
